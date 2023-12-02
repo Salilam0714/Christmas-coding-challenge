@@ -1,0 +1,107 @@
+body{
+  background-color: linen;
+  margin-bottom: 70px;
+  margin-left: 30px;
+}
+
+h1{
+  font-family: 'Kalam', cursive;
+  font-size: 120px;
+  text-align: center;
+  margin: 300px auto 180px auto;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+p{
+  font-size: 23px;
+  line-height: 150%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/***** intro *****/
+.intro{
+  height: 100vh;
+}
+.my-hobbies{
+  width: 60%;
+}
+
+.hobby-intro{
+  width: 60%;
+  font-size: 30px;
+  margin: auto;
+  line-height: 2;
+}
+
+.hobbies-row{
+  width: 60%;
+  height: 200px;
+  margin: 50px auto 100px auto;
+}
+
+
+/***** ukulele *****/
+
+.ukulele_image{
+  width: 175px;
+  float: left;
+  margin-right: 10px;
+}
+
+
+/***** calligraphy *****/
+
+
+.calligraphy_image{
+  width: 150px;
+  float: right;
+  margin-left: 10px;
+}
+
+/***** reading *****/
+
+
+.reading_image{
+  width: 170px;
+  float: left;
+  margin-right: 10px;
+}
+
+/***** traveling *****/
+
+.traveling_image{
+  width: 170px;
+  float: right;
+  margin-left: 10px;
+}
+
+/***** back *****/
+.btn-back{
+  background: #f7c570;
+  background-image: -webkit-linear-gradient(top, #f7c570, #c19a46);
+  background-image: -moz-linear-gradient(top, #f7c570, #c19a46);
+  background-image: -ms-linear-gradient(top, #f7c570, #c19a46);
+  background-image: -o-linear-gradient(top, #f7c570, #c19a46);
+  background-image: linear-gradient(to bottom, #f7c570, #c19a46);
+  -webkit-border-radius: 17;
+  -moz-border-radius: 17;
+  border-radius: 17px;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  background: #e7994c;
+  background-image: -webkit-linear-gradient(top, #e7994c, #d17224);
+  background-image: -moz-linear-gradient(top, #e7994c, #d17224);
+  background-image: -ms-linear-gradient(top, #e7994c, #d17224);
+  background-image: -o-linear-gradient(top, #e7994c, #d17224);
+  background-image: linear-gradient(to bottom, #e7994c, #d17224);
+  text-decoration: none;
+}
