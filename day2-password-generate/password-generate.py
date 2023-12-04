@@ -1,7 +1,3 @@
-# Yingtong Lin
-# Class: PROG12583-Programming Foundations-Python 1239-44137 FALL 2023
-# Assignment: Assignment #4
-# Program: assignment4_lin.py
 # Description: Read name from user and generate a remdom password, creat lists for name and password.
 
 import random 
