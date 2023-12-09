@@ -56,36 +56,48 @@ def create_file(file_name):
 # - accept a file name. Assume the file contains names and passwords in CSV format.
 #   Read from the file all names and passwords, add them into two parallel lists.
 #   Return the two lists.
+import re
 def split_file(file_name):
   with open (file_name, 'r') as file:
-    lst = file.read().split(',')
+    str = file.read().rstrip('\n')
+    lst = re.split(',|\n', str)
   return lst[::2], lst[1::2]
 
 # Function 5: 
 # - accept two parallel lists for all names and all passwords, and the maximum 
 #   number of allowed attemps. Read name and password from the user until a match
 #   is found in the two lists, or the maximum attempts have been reached.
-def find_name_password(name, password, max = 3):
+def find_name_password(name, password, max = 2):
+  #here i want the max try is 3 times, i set max here by 2, because before the for loop, i already have one input,i only need maximum 2 more input in the loop. so i set the max num is 2 and run the loop 3 times to reach the elif statement.
   user_name = input('Your user name:')
-  match_name = True
-  if match_name == True:
-    for t in max:
-      if user_name in name: break
-      elif t < max:
-        print('Try again!')
-        user_name = input('Your user name:')
-        continue
-      else:
-        print('Reach the maximum number of attempts.')
-        match_name = False
-    user_password = input('Your pin:')
-
+  for t in range(max+1):
+    if user_name in name: break
+    elif t < max:
+      print('Try again!')
+      user_name = input('Your user name:')
+      continue
+    elif t >= max:
+      print('Reach the maximum number of attempts.')
+      return
+  user_password = input('Your pin:')
+  for n in range(max+1):
+    if user_password in password:
+      print('Login successfully!')
+      break
+    elif n < max:
+      print('Try again!')
+      user_name = input('Your pin:')
+      continue
+    elif n >= max:
+      print('Reach the maximum number of attempts.')
+      return
 
 
 # Write the main() to test all functions above.
 def main():
   FILE_NAME = 'users-infor.txt'
   create_file(FILE_NAME)
-  name, password = split_file(FILE_NAME)
+  name, password= split_file(FILE_NAME)
+  print(name, password)
   find_name_password(name, password)
 main()
